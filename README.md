@@ -1,7 +1,6 @@
 # Virtualization_KVM
 
 What is KVM?
-
 -Kernel-Based Virtual Machine
 
 Why KVM?
