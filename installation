@@ -1,1 +1,27 @@
 
+
+
+sudo systemctl enable --now libvirtd
+sudo cp -rv /etc/libvirt/libvirt.conf ~/.config/libvirt/
+sudo chown jason:wheel ~/.config/libvirt/libvirt.conf
+systemctl daemon-reload
+systemctl restart libvirtd
+sudo gpasswd -a "$USER" libvirt
+
+
+
+$ sudo systemctl status sshd
+● sshd.service - OpenSSH server daemon
+   Loaded: loaded (/usr/lib/systemd/system/sshd.service; enabled; vendor preset: enable>
+   Active: active (running) since Tue 2021-04-27 14:20:06 EDT; 54min ago
+     Docs: man:sshd(8)
+           man:sshd_config(5)
+ Main PID: 1017 (sshd)
+    Tasks: 1 (limit: 100736)
+   Memory: 12.6M
+   CGroup: /system.slice/sshd.service
+           └─1017 /usr/sbin/sshd -D -oCiphers=aes256-gcm@openssh.com,chacha20-poly1305@>
+
+$ sudo grep -i 'x11' /etc/ssh/sshd_config
+X11Forwarding yes
+
