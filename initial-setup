@@ -1,0 +1,27 @@
+
+
+$ ls /var/lib/libvirt
+boot  dnsmasq  filesystems  images  network  qemu  swtpm
+
+$ sudo mkdir /var/lib/libvirt/iso
+
+$ ls /var/lib/libvirt
+boot  dnsmasq  filesystems  images  iso  network  qemu  swtpm
+
+$ sudo wget -P /var/lib/libvirt/iso http://atl.mirrors.clouvider.net/CentOS/8.3.2011/isos/x86_64/CentOS-8.3.2011-x86_64-boot.iso
+--2021-04-27 16:02:08--  http://atl.mirrors.clouvider.net/CentOS/8.3.2011/isos/x86_64/CentOS-8.3.2011-x86_64-boot.iso
+Resolving atl.mirrors.clouvider.net (atl.mirrors.clouvider.net)... 2a10:4dc0:2:5::2, 92.119.16.152
+Connecting to atl.mirrors.clouvider.net (atl.mirrors.clouvider.net)|2a10:4dc0:2:5::2|:80... failed: Connection timed out.
+Connecting to atl.mirrors.clouvider.net (atl.mirrors.clouvider.net)|92.119.16.152|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 716177408 (683M) [application/octet-stream]
+Saving to: ‘/var/lib/libvirt/iso/CentOS-8.3.2011-x86_64-boot.iso’
+
+CentOS-8.3.2011-x86_6 100%[=========================>] 683.00M  95.7MB/s    in 7.5s
+
+2021-04-27 16:04:27 (91.1 MB/s) - ‘/var/lib/libvirt/iso/CentOS-8.3.2011-x86_64-boot.iso’ saved [716177408/716177408]
+
+$ ls /var/lib/libvirt/iso/
+CentOS-8.3.2011-x86_64-boot.iso
+
+
