@@ -1,0 +1,2 @@
+sudo yum install libvirt qemu-kvm virt-install virt-2v2 libguestfs-tools
+sudo yum install cockpit cockpit-networkmanager cockpit-dashboard cockpit-storaged cockpit-packagekit cockpit-machines
